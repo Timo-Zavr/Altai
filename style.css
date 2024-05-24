@@ -21,7 +21,8 @@ body {
     padding-bottom: 120px;
     margin: 0 auto;
 
-    /* Напиши ограничения тут */
+    max-width: 1920px;
+    min-width: 360px;
 }
 
 .header {
@@ -71,7 +72,7 @@ body {
     width: 40px;
     height: 34px;
     border: none;
-    background-image: url(./images/Menu.svg);
+    background-image: url("./images/Menu.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -134,4 +135,60 @@ body {
     gap: 50px;
 }
 
-/* Напиши код ниже */
+@media screen and (max-width:1245px) {
+    .header__title {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__menu {
+        display: block;
+    }
+
+    .header__overlay {
+        padding: 40px;
+    }
+
+    .header__title {
+        font-size: 60px;
+    }
+
+    .header__subtitle {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__menu {
+        display: block;
+    }
+
+    .header__overlay {
+        padding: 40px;
+    }
+
+    .header__title {
+        font-size: 60px;
+    }
+
+    .header__subtitle {
+        font-size: 18px;
+    }
+
+    .footer__nav {
+        max-width: 97px;           /* width: Hug(97px)px;*/
+        max-height: 150px;         /*height: Hug(150px)px; */
+        gap: 20px;
+        flex-direction: initial;
+    }
+}
+
